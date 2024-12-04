@@ -15,7 +15,8 @@ alias sail='sh $([ -f sail ] && echo sail || echo vendor/bin/sail)'
 alias vim='nvim'
 alias vi='nvim'
 alias lg='lazygit'
-
+alias s='sail'
+alias art='sail artisan'
 e() {
   if [ $# -eq 0 ]; then
     nvim
