@@ -11,28 +11,40 @@ set $theme /usr/share/sway/themes/matcha-green
 include $theme/theme.conf
 
 # user theme variable can override the global theme
+# User theme variable can override the global theme
 include $HOME/.config/sway/definitions.d/theme.conf
 
-# global variables
+# Global variables
 include /etc/sway/definitions
 
-# user variables can override global definitions
+# User variables can override global definitions
 include $HOME/.config/sway/definitions.d/*.conf
 
+# Include input configurations
 include /etc/sway/inputs/*
 
-# enable modes
+# Enable modes
 include /etc/sway/modes/*
 
-# only enable this if every app you use is compatible with wayland xwayland disable
+# Disable Xwayland (uncomment only if all apps support Wayland)
+# xwayland disable
 
-# include additional configs e.g. to autostart applications
+# Include additional configs (e.g., to autostart applications)
 include /etc/sway/config.d/*
 
-# user config
+# User config
 include $HOME/.config/sway/config.d/*.conf
 
+# Configure DP-1 (left monitor)
+output DP-1 {
+    mode 2560x1440@75Hz
+    position 0 0
+}
+
+# Configure HDMI-A-1 (right monitor)
 output HDMI-A-1 {
+    mode 1920x1080@75Hz
+    position 2560 180
     transform 90
 }
 
