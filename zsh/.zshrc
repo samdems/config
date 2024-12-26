@@ -17,6 +17,7 @@ alias vi='nvim'
 alias lg='lazygit'
 alias s='sail'
 alias art='sail artisan'
+alias dbm='mycli -u sail -p password laravel'
 e() {
   if [ $# -eq 0 ]; then
     nvim
