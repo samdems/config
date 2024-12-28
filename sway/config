@@ -5,7 +5,7 @@
 # Read `man 5 sway` for a complete reference.
 
 # styles - set the folder for your theme definition file
-set $theme /usr/share/sway/themes/matcha-green
+set $theme /usr/share/sway/themes/matcha-blue
 
 # theme variables
 include $theme/theme.conf
@@ -16,6 +16,7 @@ include $HOME/.config/sway/definitions.d/theme.conf
 
 # Global variables
 include /etc/sway/definitions
+
 
 # User variables can override global definitions
 include $HOME/.config/sway/definitions.d/*.conf
@@ -46,5 +47,10 @@ output HDMI-A-1 {
     mode 1920x1080@75Hz
     position 2560 180
     transform 90
+}
+
+
+input * {
+    xkb_options "caps:super"
 }
 
