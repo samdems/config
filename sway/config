@@ -25,7 +25,8 @@ include $HOME/.config/sway/definitions.d/*.conf
 include /etc/sway/inputs/*
 
 # Enable modes
-include /etc/sway/modes/*
+#include /etc/sway/modes/*
+include $HOME/.config/sway/modes/*
 
 # Disable Xwayland (uncomment only if all apps support Wayland)
 # xwayland disable
