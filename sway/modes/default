@@ -16,6 +16,9 @@ $bindsym $alt_mod+space exec $menu
 ## Launch // Open clipboard ##
 $bindsym $mod+Shift+p exec $clipboard
 
+## Launch // Open Firefox ##
+$bindsym $mod+backslash exec firefox
+
 # Drag floating windows by holding down $mod and left mouse button.
 # Resize them with right mouse button + $mod.
 # Despite the name, also works for non-floating windows.

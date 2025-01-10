@@ -25,11 +25,6 @@ vim.keymap.set('n', '<leader> ', builtin.git_files,{})
 vim.keymap.set('n', '<leader>fo', builtin.oldfiles,{})
 vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
 
-vim.api.nvim_set_keymap('n', '<leader>t', ':Neotree float reveal=true<CR>', {noremap = true, silent = true})
-vim.api.nvim_set_keymap('n', '<leader>v', ':Neotree float git_status reveal=true<CR>', {noremap = true, silent = true})
-vim.api.nvim_set_keymap('n', '<leader>b', ':Neotree float buffers <CR>', {noremap = true, silent = true})
-vim.api.nvim_set_keymap('n', '<leader>x', ':Centerpad<cr>', { silent = true, noremap = true })
-
 vim.keymap.set('n', '<leader>s', ':vsplit<CR>', {})
 
 vim.keymap.set("n", "<leader>ha", function() harpoon:list():append() end)
@@ -125,6 +120,9 @@ vim.opt.list = true
 --  log_file_path = nil, -- absolute path to Tabnine log file
 -- })
 --
---
---
---
+vim.filetype.add({
+  pattern = {
+    ['.*%.blade%.php'] = 'php', -- cba to setting proper syntax highlighting so falling back to php
+  },
+})
+

@@ -9,7 +9,12 @@ return {
       },
     },
     init = function()
-      -- do nothing
+      vim.api.nvim_set_keymap('n', '<leader>t', ':Neotree float reveal=true<CR>', {noremap = true, silent = true})
+      vim.api.nvim_set_keymap('n', '<leader>v', ':Neotree float git_status reveal=true<CR>', {noremap = true, silent = true})
+      vim.api.nvim_set_keymap('n', '<leader>b', ':Neotree float buffers <CR>', {noremap = true, silent = true})
+    end,
+    config = function()
+      vim.api.nvim_set_hl(0, "NeoTreeTitle", { fg = "#ff8800", bold = true })
     end,
     requires = { 
       "nvim-lua/plenary.nvim",
