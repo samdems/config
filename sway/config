@@ -37,19 +37,24 @@ include /etc/sway/config.d/*
 # User config
 include $HOME/.config/sway/config.d/*.conf
 
-# Configure DP-1 (left monitor)
-output DP-1 {
+# Configure (left monitor)
+output DP-6 {
     mode 2560x1440@75Hz
     position 0 0
 }
 
-# Configure HDMI-A-1 (right monitor)
-output HDMI-A-1 {
+# Configure (right monitor - home )
+output DP-5 {
     mode 1920x1080@75Hz
     position 2560 180
     transform 90
 }
 
+# Configure (right monitor - work )
+output DP-55 {
+    mode 2560x1440@75Hz
+    position 2560 180
+}
 
 input * {
     xkb_options "caps:super"
