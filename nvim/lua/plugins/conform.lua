@@ -21,6 +21,7 @@ return {
         html = {"prettierd"},
         graphql = {"prettierd"},
         vue = {"prettierd"},
+        ejs = {"prettierd"},
       },
       formatters = {
         injected = { options = { ignore_errors = true } },

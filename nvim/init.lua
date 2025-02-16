@@ -123,6 +123,7 @@ vim.opt.list = true
 vim.filetype.add({
   pattern = {
     ['.*%.blade%.php'] = 'php', -- cba to setting proper syntax highlighting so falling back to php
+    ['.*%.ejs$'] = 'html',
   },
 })
 
