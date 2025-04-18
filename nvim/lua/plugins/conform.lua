@@ -13,20 +13,28 @@ return {
         lua = { "stylua" },
         fish = { "fish_indent" },
         sh = { "shfmt" },
-        php = { "prettierd","pint" },
+        php = { "pint" },
         blade = { "blade-formatter", "rustywind" },
         python = { "black" },
-        javascript = { "prettierd" },
-        rust =  { "rustfmt" },
-        html = {"prettierd"},
-        graphql = {"prettierd"},
-        vue = {"prettierd"},
-        ejs = {"prettierd"},
+        javascript = { "prettier" },
+        rust = { "rustfmt" },
+        html = { "prettier" },
+        graphql = { "prettier" },
+        vue = { "prettier" },
+        ejs = { "prettier" },
+        twig = { "prettier" },
       },
       formatters = {
-        injected = { options = { ignore_errors = true } },
+        prettier = {
+          command = "prettier",
+          args = {
+            "--write",
+            vim.fn.expand("%"),
+          },
+        },
       },
     }
     return opts
   end,
 }
+
