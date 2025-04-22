@@ -1,3 +1,5 @@
+# Add deno completions to search path
+if [[ ":$FPATH:" != *":/home/sam/.config/zsh/completions:"* ]]; then export FPATH="/home/sam/.config/zsh/completions:$FPATH"; fi
 if [ "$TMUX" = "" ]; then tmux; fi
 
 # Created by Zap installer
@@ -32,6 +34,7 @@ alias s='sail'
 alias art='sail artisan'
 alias dbm='mycli -u sail -p password laravel'
 alias dbp='pgcli postgresql://sail:password@localhost:5432/wise'
+alias 'vagrant down'='vagrant halt'
 
 e() {
   if [ $# -eq 0 ]; then
@@ -46,3 +49,4 @@ export EDITOR=nvim
 
 
 bindkey -s '^F' 'fzf\n'
+. "/home/sam/.deno/env"
